@@ -1,0 +1,21 @@
+<template name="Header">
+  <img class="ui fluid image" src="/images/vending-machine.jpg">
+  <div class="ui borderless inverted menu" style="margin:0px; border-radius:0px">
+    <div class="ui container">
+      <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Vending</h1></a>
+      <a class="item" href="{{pathFor 'Map'}}"><p>Map</p></a>
+      <a class="item" href="{{pathFor 'Machine'}}"><p>Machine Info</p></a>
+      <a class="item" href="{{pathFor 'Info'}}"><p>Product Info</p></a>
+      <a class="item" href="{{pathFor 'Poll'}}"><p>Polls</p></a>
+      <div class="ui container" style="padding-top:12px;">
+        <div class="ui icon input">
+          <input type="text" placeholder="Search for a product">
+          <i class="circular search link icon"></i>
+        </div>
+      </div>
+      {{#if currentUser}}
+      {{/if}}
+      <a href="#" class="right floated item">{{> loginButtons }} </a>
+    </div>
+  </div>
+</template>

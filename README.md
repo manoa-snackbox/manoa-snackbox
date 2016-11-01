@@ -1,1 +1,1 @@
-# vending
+# final-project-mockup
