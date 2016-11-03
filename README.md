@@ -1,1 +1,1 @@
-# final-project-mockup
+# manoa-snackbox
