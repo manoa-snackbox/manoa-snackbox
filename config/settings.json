@@ -1,0 +1,7 @@
+{
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://admin:snackbox@ds153705.mlab.com:53705/snackboxdb"
+    }
+  }
+}
