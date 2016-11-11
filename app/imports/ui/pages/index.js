@@ -1,5 +1,7 @@
 import './home-page.html';
 
+import './admin-home-page.html';
+
 import './map.html';
 
 import './info.html';
