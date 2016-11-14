@@ -1,0 +1,151 @@
+<template name="Map">
+  <body style="padding-bottom:20px; overflow:hidden;">
+
+  <div class="pusher">
+    <div class="ui centered grid" style="padding-top:20px;">
+
+      <img class="ui fixed image" src="/images/vendingUpperCampusMap.png" alt="Upper Campus" usemap="#UCMap"/>
+      <map name="UCMap" id="UCMap">
+        <area alt="Shidler College of Business" title="Shidler College of Business" href="{{pathFor 'Machine'}}"
+              shape="rect" coords="165,0,220,35"/>
+        <area alt="KHET TV/PBS" title="KHET TV/PBS" href="{{pathFor 'Machine'}}" shape="rect" coords="350,0,384,35"/>
+        <area alt="Architecture Building" title="Architecture Building" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="30,45,64,80"/>
+        <area alt="Saunders Hall" title="Saunders Hall" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="184,76,239,111"/>
+        <area alt="Queen Lili'uokalani Center for Student Services"
+              title="Queen Lili'uokalani Center for Student Services" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="219,112,277,143"/>
+        <area alt="Hemenway Hall" title="Hemenway Hall" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="35,165,90,200"/>
+        <area alt="Webster Hall" title="Webster Hall" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="275,162,330,197"/>
+        <area alt="Biomedical Sciences Building" title="Biomedical Sciences Building" href="{{pathFor 'Machine'}}"
+              shape="rect" coords="605,146,660,161"/>
+        <area alt="Campus Center" title="Campus Center" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="79,214,134,249"/>
+        <area alt="St. John Plant Science Lab" title="St. John Plant Science Lab" href="{{pathFor 'Machine'}}"
+              shape="rect" coords="473,221,507,256"/>
+        <area alt="Post Office" title="Post Office" href="{{pathFor 'Machine'}}" shape="rect" coords="18,255,52,290"/>
+        <area alt="Art Building" title="Art Building" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="211,251,266,286"/>
+        <area alt="Moore Hall" title="Moore Hall" href="{{pathFor 'Machine'}}" shape="rect" coords="455,293,532,328"/>
+        <area alt="Kuykendall Hall" title="Kuykendall Hall" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="123,323,200,358"/>
+        <area alt="Bilger Hall Addition" title="Bilger Hall Addition" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="291,325,325,360"/>
+        <area alt="Keller Hall" title="Keller Hall" href="{{pathFor 'Machine'}}" shape="rect" coords="346,329,423,364"/>
+        <area alt="Physical Science Building" title="Physical Science Building" href="{{pathFor 'Machine'}}"
+              shape="rect" coords="307,361,341,396"/>
+        <area alt="Lincoln Hall" title="Lincoln Hall" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="487,377,521,412"/>
+        <area alt="Pacific Ocean Science & Technology Building" title="Pacific Ocean Science & Technology Building"
+              href="{{pathFor 'Machine'}}" shape="rect" coords="168,460,223,495"/>
+        <area alt="Jefferson Hall" title="Jefferson Hall" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="422,447,456,482"/>
+        <area alt="Hale Kuahine" title="Hale Kuahine" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="514,431,548,466"/>
+        <area alt="Hale Kahawai" title="Hale Kahawai" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="551,413,585,448"/>
+        <area alt="Hale Laulima" title="Hale Laulima" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="603,392,637,427"/>
+        <area alt="Holmes Hall" title="Holmes Hall" href="{{pathFor 'Machine'}}" shape="rect" coords="177,538,232,573"/>
+        <area alt="Hale Manoa" title="Hale Manoa" href="{{pathFor 'Machine'}}" shape="rect" coords="329,522,406,557"/>
+        <area alt="Burns Hall" title="Burns Hall" href="{{pathFor 'Machine'}}" shape="rect" coords="251,587,306,622"/>
+      </map>
+
+      <img class="ui fixed image" src="/images/vendingLowerCampusMap.png" alt="Lower Campus" usemap="#LCMap"/>
+      <map name="LCMap" id="LCMap">
+        <area alt="Music Building Complex" title="Music Building Complex" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="131,2,165,37"/>
+        <area alt="Law School" title="Law School" href="{{pathFor 'Machine'}}" shape="rect" coords="302,80,379,115"/>
+        <area alt="Athletic Complex" title="Athletic Complex" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="224,219,279,254"/>
+        <area alt="Johnson Hall A" title="Johnson Hall A" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="432,237,466,272"/>
+        <area alt="Hale Anuenue" title="Hale Anuenue" href="{{pathFor 'Machine'}}" shape="rect" coords="24,343,58,378"/>
+        <area alt="Kahanamoku Pool" title="Kahanamoku Pool" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="170,305,204,340"/>
+        <area alt="Johnson Hall B" title="Johnson Hall B" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="468,283,502,318"/>
+        <area alt="Gateway House" title="Gateway House" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="490,321,524,356"/>
+        <area alt="Frear Hall" title="Frear Hall" href="{{pathFor 'Machine'}}" shape="rect" coords="531,369,565,404"/>
+        <area alt="Army ROTC" title="Army ROTC" href="{{pathFor 'Machine'}}" shape="rect" coords="155,482,189,517"/>
+        <area alt="Hale Lehua" title="Hale Lehua" href="{{pathFor 'Machine'}}" shape="rect" coords="527,481,561,516"/>
+        <area alt="Hale Wainani Laundry" title="Hale Wainani Laundry" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="270,609,304,643"/>
+        <area alt="Hale Wainani #2" title="Hale Wainani #2" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="305,573,340,608"/>
+        <area alt="Hale Wainani #1" title="Hale Wainani #1" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="341,560,375,595"/>
+        <area alt="Hale Noelani Laundry" title="Hale Noelani Laundry" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="410,561,444,596"/>
+        <area alt="Hale Lokelani" title="Hale Lokelani" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="479,541,513,576"/>
+        <area alt="Hale Ilima" title="Hale Ilima" href="{{pathFor 'Machine'}}" shape="rect" coords="555,529,589,564"/>
+        <area alt="Hale Mokihana" title="Hale Mokihana" href="{{pathFor 'Machine'}}" shape="rect"
+              coords="533,587,567,622"/>
+      </map>
+      <div class="item">
+        <div
+            style="height:300px; width:230px; overflow-x: hidden; overflow-y: scroll;">
+          <h3 align="left">Upper Campus</h3>
+          <hr>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Shidler College of Business</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">KHET TV/PBS</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Architecture Building</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Saunders Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Queen Lili'uokalani Center for Student
+            Services</p>
+          </a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hemenway Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Webster Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Biomedical Sciences Building</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Campus Center</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">St. John Plant Science Lab</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Post Office</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Art Building</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Moore Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Kuykendall Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Bilger Hall Addition</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Keller Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Physical Science Building</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Lincoln Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Pacific Ocean Science & Technology Building</p>
+          </a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Jefferson Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Kuahine</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Kahawai</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Laulima</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Holmes Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Manoa</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Burns Hall</p></a>
+
+          <h3 align="left">Lower Campus</h3>
+          <hr>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Music Building Complex</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Law School</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Athletic Complex</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Johnson Hall A</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Anuenue</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Kahanamoku Pool</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Johnson Hall B</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Gateway House</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Frear Hall</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Army ROTC</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Lehua</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Wainani Laundry</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Wainani #2</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Wainani #1</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Noelani Laundry</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Lokelani</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Ilima</p></a>
+          <a class="item" href="{{pathFor 'Machine'}}"><p align="left">Hale Mokihana</p></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </body>
+</template>

@@ -1,0 +1,82 @@
+<template name="Poll">
+  <div class="ui centered container" style="padding-top:20px">
+    <div class="ui styled accordion">
+      <div class="title">
+        <i class="dropdown icon"></i>
+        What new product would you like us to make available?
+        <i class="check icon"></i>
+      </div>
+      <div class="active content">
+        <div class="ui form">
+          <div class="grouped fields">
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="small">
+                <label>Drink</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="medium">
+                <label>Drink</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="large">
+                <label>Drink</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="x-large">
+                <label>Drink</label>
+              </div>
+            </div>
+            <button class="ui button">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <i class="dropdown icon"></i>
+        How would you rate the frequency by which machines are filled?
+      </div>
+      <div class="active content">
+        <div class="ui form">
+          <div class="grouped fields">
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="small">
+                <label>4 - I can always buy what I want!</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="medium">
+                <label>3 - Occasionally I encounter a sold out product</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="large">
+                <label>2 - The machines seem to be sold out quite frequently</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio checkbox">
+                <input type="radio" name="size" value="x-large">
+                <label>1 - The product I want is always sold out</label>
+              </div>
+            </div>
+            <button class="ui button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.ui.accordion')
+        .accordion()
+    ;
+  </script>
+</template>
