@@ -8,6 +8,14 @@ FlowRouter.route('/', {
   },
 });
 
+
+FlowRouter.route('/admin-home-page', {
+  name: 'Admin_Home_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Admin_Home_Page' });
+  },
+});
+
 FlowRouter.route('/map', {
   name: 'Map',
   action() {
@@ -26,6 +34,13 @@ FlowRouter.route('/polls', {
   name: 'Poll',
   action() {
     BlazeLayout.render('App_Body', { main: 'Poll' });
+  },
+});
+
+FlowRouter.route('/edit-machine/:id', {
+  name: 'Edit_Machine',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Machine' });
   },
 });
 
