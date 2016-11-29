@@ -1,0 +1,57 @@
+<template name="Product">
+  <div class="ui container">
+    <div class="ui grid container">
+
+        <img class="ui left image" src="{{ productField 'image' }}"/>
+
+      <div class="column">
+        <table style="margin-top: 20px; width: 500px;" class="ui celled table">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Calories</th>
+            <th>Fat</th>
+            <th>Sodium</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>{{ productField 'name' }}</td>
+            <td>{{ productField 'size' }}</td>
+            <td>{{ productField 'calories' }}</td>
+            <td>{{ productField 'fat' }}</td>
+            <td>{{ productField 'sodium' }}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th>Carbs</th>
+            <th>Sugar</th>
+            <th>Protein</th>
+            <th colspan="2">Caffeine</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>{{ productField 'carbs' }}</td>
+            <td>{{ productField 'sugar' }}</td>
+            <td>{{ productField 'protein' }}</td>
+            <td colspan="2">{{ productField 'caffeine' }}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th colspan="5">Ingredients</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td colspan="5">{{ productField 'ingredients' }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</template>

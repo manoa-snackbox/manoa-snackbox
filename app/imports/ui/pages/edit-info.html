@@ -1,0 +1,59 @@
+<template name="Edit_Info_Page">
+  <div class="ui container" style="margin-top:25px;">
+    <form class="ui form edit-info-form">
+      <h4 class="ui dividing header">Add Product</h4>
+      <div class="three fields">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" name="Name" value="{{ productField 'name' }}">
+        </div>
+        <div class="field">
+          <label>Size</label>
+          <input type="text" name="Size" value="{{ productField 'size' }}">
+        </div>
+        <div class="field">
+          <label>Image URL</label>
+          <input type="text" name="Image" value="{{ productField 'image' }}">
+        </div>
+      </div>
+      <div class="three fields">
+        <div class="field">
+          <label>Calories</label>
+          <input type="text" name="Calories" value="{{ productField 'calories' }}">
+        </div>
+        <div class="field">
+          <label>Fat</label>
+          <input type="text" name="Fat" value="{{ productField 'fat' }}">
+        </div>
+        <div class="field">
+          <label>Sodium</label>
+          <input type="text" name="Sodium" value="{{ productField 'sodium' }}">
+        </div>
+      </div>
+      <div class="four fields">
+        <div class="field">
+          <label>Carbs</label>
+          <input type="text" name="Carbs" value="{{ productField 'carbs' }}">
+        </div>
+        <div class="field">
+          <label>Sugar</label>
+          <input type="text" name="Sugar" id="sugar" value="{{ productField 'sugar' }}">
+        </div>
+        <div class="field">
+          <label>Protein</label>
+          <input type="text" name="Protein" value="{{ productField 'protein' }}">
+        </div>
+        <div class="field">
+          <label>Caffeine</label>
+          <input type="text" name="Caffeine" value="{{ productField 'caffeine' }}">
+        </div>
+      </div>
+      <div class="field">
+        <label>Ingredients</label>
+        <input type="text" name="Ingredients" value="{{ productField 'ingredients' }}">
+      </div>
+      <button class="ui button" type="submit">Update</button>
+      <button class="ui button delete" type="submit">Delete</button>
+    </form>
+  </div>
+</template>

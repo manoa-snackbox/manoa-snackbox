@@ -1,6 +1,35 @@
 <template name="Info">
   <div class="ui container">
-    <img class="ui center floated image" src="/images/20cokeimg.png"/>
-    <img class="ui image" src="/images/20ozcoke.PNG"/>
+    <div class="ui container" style="padding-top: 20px;">
+      <a class="ui button" href="{{pathFor 'Add_Info'}}">Add a product</a>
+    </div>
+    {{#if Template.subscriptionsReady}}
+    <table style="margin-top: 20px" class="ui celled table">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Calories</th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      {{#each product in productsList}}
+        <tr>
+          <td><img class="ui tiny image" src="{{product.image}}"/></td>
+          <td><a href="{{pathFor 'Product' _id=product._id}}">{{product.name}}</a></td>
+          <td>{{product.size}}</td>
+          <td>{{product.calories}}</td>
+          <td><a href="{{pathFor 'Edit_Info_Page' _id=product._id}}">Edit</a></td>
+
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+      {{> Loading}}
+    {{/if}}
   </div>
 </template>
