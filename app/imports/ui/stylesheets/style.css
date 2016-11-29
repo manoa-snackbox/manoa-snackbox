@@ -1,0 +1,18 @@
+body {
+
+}
+
+.ui.inverted.menu{
+  background-color: #005130;
+}
+
+#login-buttons a, .accounts-dialog a {
+  color: rgba(255, 255, 255, 0.901961);
+}
+
+.sidebar.heading{
+  margin: centered;
+  color: white;
+  padding-top: 10px;
+  pading-bottom: 10px;
+}

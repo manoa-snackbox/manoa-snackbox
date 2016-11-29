@@ -1,0 +1,51 @@
+
+
+<template name="Admin_Home_Page">
+  {{#If_Logged_In}}
+
+  <div class="ui middle aligned grid container" style='padding-top: 100px;'>
+
+    {{#if Template.subscriptionsReady}}
+
+    <i class="huge left settings icon"></i>
+    <div class="eight wide column">
+      <h1>Admin & Vendor Control Panel</h1>
+
+
+      <h2>All Vending Machines</h2>
+
+      <div id='container' style='height:500px;width:850px;overflow-y:scroll'>
+        <table style="margin-top: 20px" class="ui celled table">
+          <thead>
+          <tr>
+            <th>Machine ID</th>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Vendor</th>
+            <th>Last Stocked</th>
+            <th>Edit</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          {{#each machine in machinesList}}
+          <tr>
+            <td>{{machine.mid}}</td>
+            <td>{{machine.type}}</td>
+            <td>{{machine.location}}</td>
+            <td>{{machine.vendor}}</td>
+            <td>{{machine.last}}</td>
+            <td><a href="{{pathFor 'Edit_Machine' _id=machine._id}}">Edit</a></td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    {{else}}
+    {{> Loading}}
+    {{/if}}
+  </div>
+  {{/If_Logged_In}}
+</template>
