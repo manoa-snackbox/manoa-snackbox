@@ -1,3 +1,8 @@
 import './accounts.js';
-import './machines.js';
+<<<<<<< HEAD
+//import './machines.js';
+=======
+import './products.js';
+import './publications.js';
+>>>>>>> refs/remotes/origin/machine-info-page
 
