@@ -1,0 +1,85 @@
+<template name="Add_Product_Page">
+  <div class="ui bottom attached segment pushable">
+    <div class="ui visible inverted left vertical sidebar menu">
+      <div class="sidebar heading">
+        <h1>Locations</h1>
+      </div>
+      <select name="locations" class="ui fluid search dropdown" placeholder="Select">
+        <option value="Upper Campus">--Upper Campus--</option>
+        <option value="Architecture Building">Architecture Building</option>
+        <option value="Art Building">Art Building</option>
+        <option value="Bilger Hall Addition">Bilger Hall Addition</option>
+        <option value="Biomedical Science Building">Biomedical Science Building</option>
+        <option value="Burns Hall">Burns Hall</option>
+        <option value="Campus Center">Campus Center</option>
+        <option value="Hale Kahawai">Hale Kahawai</option>
+        <option value="Hale Kuahine">Hale Kuahine</option>
+        <option value="Hale Laulima">Hale Laulima</option>
+        <option value="Hale Manoa">Hale Manoa</option>
+        <option value="Hemenway Hall">Hemenway Hall</option>
+        <option value="Holmes Hall">Holmes Hall</option>
+        <option value="Jefferson Hall">Jefferson Hall</option>
+        <option value="Keller Hall">Keller Hall</option>
+        <option value="Lower Campus">--Lower Campus--</option>
+        <option value="Army ROTC">Army ROTC</option>
+        <option value="Athletic Complex">Athletic Complex</option>
+        <option value="Frear Hall">Frear Hall</option>
+        <option value="Gateway House">Gateway House</option>
+        <option value="Hale Ilima">Hale Ilima</option>
+        <option value="Hale Lehua">Hale Lehua</option>
+        <option value="Hale Lokelani">Hale Lokelani</option>
+        <option value="Hale Mokihana">Hale Mokihana</option>
+        <option value="Hale Wainani">Hale Wainani</option>
+        <option value="Hemenway Hall">Hemenway Hall</option>
+        <option value="Holmes Hall">Holmes Hall</option>
+        <option value="Jefferson Hall">Jefferson Hall</option>
+        <option value="Keller Hall">Keller Hall</option>
+      </select>
+    </div>
+    <div class="pusher">
+      <div style="margin-top: 20px" class="ui container">
+        <form class="ui form product-data-form {{ errorClass }}">
+          <h4 class="ui dividing header">Add Product Information</h4>
+
+          <div class="field">
+            <label>Product</label>
+            <div class="field">
+              <input type="text" name="name" id="name" placeholder="Product Name">
+              {{#if displayFieldError 'name' }}
+              <div class="ui error message">
+                <p>You must specify product name.</p>
+              </div>
+              {{/if}}
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Size</label>
+            <div class="field">
+              <input type="text" name="size" id="size" placeholder="20 oz. bottle">
+              {{#if displayFieldError 'size' }}
+              <div class="ui error message">
+                <p>You must specify size of item.</p>
+              </div>
+              {{/if}}
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Price</label>
+            <div class="field">
+              <input type="text" name="price" id="price" placeholder="$x.xx">
+              {{#if displayFieldError 'price' }}
+              <div class="ui error message">
+                <p>You must specify price of product.</p>
+              </div>
+              {{/if}}
+            </div>
+          </div>
+
+          <button class="ui button" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

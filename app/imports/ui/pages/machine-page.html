@@ -1,0 +1,99 @@
+<template name="Machine_Page">
+   <div class="ui bottom attached segment pushable">
+   <div class="ui visible inverted left vertical sidebar menu">
+     <div class ="sidebar heading">
+       <h1>Locations</h1>
+     </div>
+        <select name="locations" class="ui fluid search dropdown" placeholder="Select">
+         <option value="Upper Campus">--Upper Campus--</option>
+         <option value="Architecture Building">Architecture Building</option>
+         <option value="Art Building">Art Building</option>
+         <option value="Bilger Hall Addition">Bilger Hall Addition</option>
+          <option value="Biomedical Science Building">Biomedical Science Building</option>
+         <option value="Burns Hall">Burns Hall</option>
+         <option value="Campus Center">Campus Center</option>
+         <option value="Hale Kahawai">Hale Kahawai</option>
+         <option value="Hale Kuahine">Hale Kuahine</option>
+         <option value="Hale Laulima">Hale Laulima</option>
+         <option value="Hale Manoa">Hale Manoa</option>
+         <option value="Hemenway Hall">Hemenway Hall</option>
+         <option value="Holmes Hall">Holmes Hall</option>
+         <option value="Jefferson Hall">Jefferson Hall</option>
+         <option value="Keller Hall">Keller Hall</option>
+   <option value="Lower Campus">--Lower Campus--</option>
+       <option value="Army ROTC">Army ROTC</option>
+       <option value="Athletic Complex">Athletic Complex</option>
+       <option value="Frear Hall">Frear Hall</option>
+       <option value="Gateway House">Gateway House</option>
+       <option value="Hale Ilima">Hale Ilima</option>
+       <option value="Hale Lehua">Hale Lehua</option>
+       <option value="Hale Lokelani">Hale Lokelani</option>
+       <option value="Hale Mokihana">Hale Mokihana</option>
+       <option value="Hale Wainani">Hale Wainani</option>
+       <option value="Hemenway Hall">Hemenway Hall</option>
+       <option value="Holmes Hall">Holmes Hall</option>
+       <option value="Jefferson Hall">Jefferson Hall</option>
+       <option value="Keller Hall">Keller Hall</option>
+     </select>
+   </div>
+   <div class="pusher">
+     <div class="ui basic segment">
+ <div class="ui container" style="padding-top:20px;">
+   <div class="ui relaxed divided list">
+     <div class="item">
+       <i class="large map outline middle aligned icon"></i>
+       <div class="content">
+         <h1>Location:</h1>
+         <div class="description">Architecture Building</div>
+       </div>
+     </div>
+     <div class="item">
+       <i class="large cubes middle aligned icon"></i>
+       <div class="content">
+         <h1>Category:</h1>
+         <div class="description">Drinks</div>
+       </div>
+     </div>
+     <div class="item">
+       <i class="large checked calendar middle aligned icon"></i>
+       <div class="content">
+         <h1>Last filled:</h1>
+         <div class="description">10/10/2016</div>
+       </div>
+     </div>
+     <div class="item">
+       <i class="large dollar middle aligned icon"></i>
+       <div class="content">
+         <h1>Sells:</h1>
+       </div>
+     </div>
+   </div>
+  <div class="ui container">
+    {{#if Template.subscriptionsReady}}
+    <table style="margin-top: 20px" class="ui celled table">
+      <thead>
+      <tr>
+        <th>Product</th>
+        <th>Size</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      {{#each product in productsList}}
+      <tr>
+        <td>{{product.name}}</td>
+        <td>{{product.size}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    {{> Loading}}
+    {{/if}}
+    </div>
+   </div>
+       </div>
+     </div>
+     </div>
+</template>

@@ -44,10 +44,24 @@ FlowRouter.route('/edit-machine/:id', {
   },
 });
 
-FlowRouter.route('/machine', {
-  name: 'Machine',
+FlowRouter.route('/machine-page', {
+  name: 'Machine_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Machine' });
+    BlazeLayout.render('App_Body', { main: 'Machine_Page' });
+  },
+});
+
+FlowRouter.route('/add-product', {
+  name: 'Add_Product_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Product_Page' });
+  },
+});
+
+FlowRouter.route('/edit-product', {
+  name: 'Edit_Product_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Product_Page' });
   },
 });
 
