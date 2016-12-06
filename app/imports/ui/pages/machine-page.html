@@ -81,7 +81,7 @@
       <tbody>
       {{#each product in productsList}}
       <tr>
-        <td>{{product.name}}</td>
+        <td><a href="{{pathFor 'Product' _id=product._id}}">{{product.name}}</a></td>
         <td>{{product.size}}</td>
         <td>{{product.price}}</td>
       </tr>

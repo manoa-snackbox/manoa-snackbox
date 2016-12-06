@@ -5,3 +5,11 @@ import { Template } from 'meteor/templating';
 Template.Header.onRendered(function enableDropDown() {
   this.$('.dropdown').dropdown();
 });
+
+window.onload = choosePic;
+
+function choosePic() {
+  var myPix = new Array("/images/ArtBanner.jpg","/images/HolmesBanner.jpg","/images/KuykendallBanner.jpg", "/images/PostBanner.jpg");
+  var randomNum = Math.floor(Math.random()*myPix.length);
+  document.getElementById("banner").src = myPix[randomNum];
+}

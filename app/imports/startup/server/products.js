@@ -1,33 +1,24 @@
 import { Products } from '../../api/products/products.js';
-import {_} from 'meteor/underscore';
+import { _ } from 'meteor/underscore';
 
-/**
- * A list of Products to pre-fill the Collection.
- * @type {*[]}
- */
-const productSeeds = [
-  {
-    name: 'Coca Cola',
-    size: '20 oz. bottle',
-    price: '$1.75'
-  },
-  {
-    name: 'Coca Zero',
-    size: '20 oz. bottle',
-    price: '$1.75'
-  },
-  {
-    name: 'Diet Coke',
-    size: '20 oz. bottle',
-    price: '$1.75'
-  },
+
+const productsSeeds = [
+    /*drinks*/
+  {name:'Coca-Cola', category: 'drink', size:'20oz', price:"$1.75", image:'/images/cocacola.png', calories:'240', fat:'0g | 0 %DV', sodium:'75mg | 3% DV', carbs:'65g | 22% DV', sugar:'65g', protein:'0g', caffeine:'57mg', ingredients:'carbonated water, high fructose corn syrup, caramel color, phosphoric acid, natural flavors, caffeine' },
+  {name:'Coke Zero', category: 'drink', size:'20oz', price:"$1.75", image:'/images/cokezero.png', calories:'0', fat:'0g | 0% DV', sodium:'70mg | 3% DV', carbs:'0g | 0% DV', sugar:'0g', protein:'0g', caffeine:'57mg', ingredients:'carbonated water, caramel color, phosphoric acid, aspartame, potassium benzoate, natural flavors, potassium citrate, acesulfame potassium, caffeine' },
+  {name:'Diet Coke', category: 'drink', size:'20oz', price:"$1.75", image:'/images/dietcoke.png', calories:'0', fat:'0g | 0% DV', sodium:'70mg | 3% DV', carbs:'0g | 0% DV', sugar:'0g', protein:'0g', caffeine:'76mg', ingredients:'carbonated water, caramel color, aspartame, phosphoric acid, potassium benzoate, natural flavors, citric acid, caffeine' },
+  {name:'Coca-Cola Cherry', category: 'drink', size:'20oz', price:"$1.75", image:'/images/cherrycoke.png', calories:'260', fat:'0g | 0% DV', sodium:'60mg | 3% DV', carbs:'70g | 23% DV', sugar:'70g', protein:'0g', caffeine:'57mg', ingredients:'carbonated water, high fructose corn syrup, caramel color, phosphoric acid, natural flavors, caffeine' },
+  {name:'Sprite', category: 'drink', size:'20oz', price:"$1.75", image:'/images/sprite.png', calories:'240', fat:'0g | 0% DV', sodium:'110mg | 5% DV', carbs:'64g | 21% DV', sugar:'64g', protein:'0g', caffeine:'0mg', ingredients:'carbonated water, high fructose corn syrup, citric acid, natural flavors, sodium citrate, sodium benzoate' },
+  {name:'Dr Pepper', category: 'drink', size:'20oz', price:"$1.75", image:'/images/drpepper.png', calories:'250', fat:'0g | 0% DV', sodium:'100mg | 4% DV', carbs:'66g | 22% DV', sugar:'64g', protein:'0g', caffeine:'68mg', ingredients:'carbonated water, high fructose corn syrup, phosphoric acid, natural and artificial flavors, sodium benzoate, caffeine' },
+  {name:'Dasani', category: 'drink', size:'20oz', price:"$1.75", image:'/images/dasani.png', calories:'0', fat:'0g | 0% DV', sodium:'0mg | 0% DV', carbs:'0g | 0% DV', sugar:'0g', protein:'0g', caffeine:'0mg', ingredients:'purified water, magnesium sulphate, potassium chloride, salt' },
+  {name:'Mountain Berry Blast Powerade', category: 'drink', size:'20oz', price:"$1.75", image:'/images/berrypowerade.png', calories:'130', fat:'0g | 0% DV', sodium:'250mg | 10% DV', carbs:'35g | 12% DV', sugar:'34g', protein:'0g', caffeine:'0mg', ingredients:'water, high fructose corn syrup, citric acid, salt, magnesium chloride, calcium chloride, mono-potassium sulphate, natural flavors, modified food starch, calcium disodium, medium chain triglycerides, sucrose acetate isobutyrate, vitamin B3, vitamin B6, vitamin B12, blue 1' },
+  {name:'Fruit Punch Powerade', category: 'drink', size:'20oz', price:"$1.75", image:'/images/fruitpunchpowerade.png', calories:'130', fat:'0g | 0% DV', sodium:'250mg | 10% DV', carbs:'36g | 12% DV', sugar:'34g', protein:'0g', caffeine:'0mg', ingredients:'water, high fructose corn syrup, citric acid, natural flavors, salt, magnesium chloride, calcium chloride, mono-potassium phosphate, modified food starch, glycerol ester of rosin, calcium disodium, medium chain triglycerides, vitamin B3, vitamin B6, vitamin B12, red 40, ascorbic acid' },
+  {name:'Lemon Lime Powerade', category: 'drink', size:'20oz', price:"$1.75", image:'/images/lemonlimepowerade.png', calories:'130', fat:'0g | 0% DV', sodium:'250mg | 10% DV', carbs:'35g | 12% DV', sugar:'34g', protein:'0g', caffeine:'0mg', ingredients:'water, high fructose corn syrup, citric acid, salt, mono-potassium phosphate, magnesium chloride, calcium chloride, gum acacia, natural flavors, glycerol ester of rosin, calcium disodium, medium chain triglycerides, vitamin B3, yellow 5, vitamin B6, vitamin B12, ascorbic acid, calcium disodium' },
+  {name:'Monster Energy', category: 'drink', size:'16oz', price:"$2.50", image:'/images/monster.png', calories:'210', fat:'0g | 0% DV', sodium:'370mg | 15% DV', carbs:'54g | 18% DV', sugar:'54g', protein:'0g', caffeine:'160mg', ingredients:'carbonated water, sugar, glucose, citric acid, natural flavors, taurine, sodium citrate, color, panax ginseng extract, l-carnitine, l-tartrate, caffeine, sorbic acid, benzoic acid, vitamin B3, sucralose, salt, d-glucuronolactone, inositol, guarana extract, vitamin B6, vitamin B2, maltodextrin, vitamin B12' },
 ];
 
-/**
- * Initialize the Stuff collection if empty with seed data.
- */
 if (Products.find().count() === 0) {
-  _.each(productSeeds, function seedProducts(stuff) {
-    Products.insert(stuff);
+  _.each(productsSeeds, function seedProducts(product) {
+    Products.insert(product);
   });
 }
