@@ -1,8 +1,9 @@
 <template name="Product">
+  {{> Header}}
   <div class="ui container">
     <div class="ui grid container">
 
-        <img class="ui left image" src="{{ productField 'image' }}"/>
+        <img class="ui left image" style="margin-top: 20px;" src="{{ productField 'image' }}"/>
 
       <div class="column">
         <table style="margin-top: 20px; width: 500px;" class="ui celled table">

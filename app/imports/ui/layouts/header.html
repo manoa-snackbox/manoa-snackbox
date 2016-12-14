@@ -1,13 +1,11 @@
 <template name="Header">
-  <img class="ui fluid image" src="/images/HolmesBanner.jpg" id="banner">
   <div class="ui borderless inverted menu" style="margin:0px; border-radius:0px">
     <div class="ui container">
       <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Manoa-Snackbox</h1></a>
       {{#if currentUser}}
       <a class="item" href="{{pathFor 'Map'}}"><p>Map</p></a>
-      <a class="item" href="{{pathFor 'Machine_Page'}}"><p>Machine Info</p></a>
-      <a class="item" href="{{pathFor 'Info'}}"><p>Product Info</p></a>
-      <a class="item" href="{{pathFor 'Poll'}}"><p>Polls</p></a>
+      <a class="item" href="{{pathFor 'Machine_Page'}}"><p>Machines</p></a>
+      <a class="item" href="{{pathFor 'Info'}}"><p>Products</p></a>
       <a class="item" href="{{pathFor 'Admin_Home_Page'}}"><p>Admin</p></a>
 
       <div class="ui container" style="padding-top:12px;">

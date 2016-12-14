@@ -1,7 +1,3 @@
-/**
- * Created by Joseph on 11/29/2016.
- */
-
 import { Template } from 'meteor/templating';
 import { Products } from '../../api/products/products.js';
 import { _ } from 'meteor/underscore';

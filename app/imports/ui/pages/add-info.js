@@ -1,7 +1,3 @@
-/**
- * Created by Joseph on 11/27/2016.
- */
-
 import { Template } from 'meteor/templating';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';

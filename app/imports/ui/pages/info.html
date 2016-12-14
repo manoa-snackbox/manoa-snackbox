@@ -1,33 +1,73 @@
 <template name="Info">
+  {{> Header}}
   <div class="ui container">
     <div class="ui container" style="padding-top: 20px;">
-      <a class="ui button" href="{{pathFor 'Add_Info'}}">Add a product</a>
     </div>
     {{#if Template.subscriptionsReady}}
-    <table style="margin-top: 20px" class="ui celled table">
-      <thead>
-      <tr>
-        <th></th>
-        <th>Name</th>
-        <th>Size</th>
-        <th>Calories</th>
-        <th></th>
-      </tr>
-      </thead>
+      <h1><i class="large coffee icon"></i>Drinks</h1>
+      <div style="height:300px; width:1120px; overflow-x: hidden; overflow-y: scroll; border-style:ridge; border-width:1px;">
+        <table style="margin-top: 20px" class="ui celled table">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Calories</th>
+          </tr>
+          </thead>
 
-      <tbody>
-      {{#each product in productsList}}
-        <tr>
-          <td><img class="ui tiny image" src="{{product.image}}"/></td>
-          <td><a href="{{pathFor 'Product' _id=product._id}}">{{product.name}}</a></td>
-          <td>{{product.size}}</td>
-          <td>{{product.calories}}</td>
-          <td><a href="{{pathFor 'Edit_Info_Page' _id=product._id}}">Edit</a></td>
+          <tbody>
+          {{#each drink in drinksList}}
+            <tr>
+              <td><img class="ui tiny image" src="{{drink.image}}"/></td>
+              <td><a href="{{pathFor 'Product' _id=drink._id}}">{{drink.name}}</a></td>
+              <td>{{drink.size}}</td>
+              <td>{{drink.calories}}</td>
+            </tr>
+          {{/each}}
+          </tbody>
+          <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+      <h1><i class="large food icon"></i>Snacks</h1>
+      <div style="height:300px; width:1120px; overflow-x: hidden; overflow-y: scroll; border-style:ridge; border-width:1px;">
+        <table style="margin-top: 20px" class="ui celled table">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Calories</th>
+          </tr>
+          </thead>
 
-        </tr>
-      {{/each}}
-      </tbody>
-    </table>
+          <tbody>
+          {{#each snack in snacksList}}
+            <tr>
+              <td><img class="ui tiny image" src="{{snack.image}}"/></td>
+              <td><a href="{{pathFor 'Product' _id=snack._id}}">{{snack.name}}</a></td>
+              <td>{{snack.size}}</td>
+              <td>{{snack.calories}}</td>
+            </tr>
+          {{/each}}
+          </tbody>
+          <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
     {{else}}
       {{> Loading}}
     {{/if}}
