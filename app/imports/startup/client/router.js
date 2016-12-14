@@ -52,16 +52,23 @@ FlowRouter.route('/machine-page', {
 });
 
 FlowRouter.route('/add-product', {
-  name: 'Add_Product_Page',
+  name: 'Add_Info',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Add_Product_Page' });
+    BlazeLayout.render('App_Body', { main: 'Add_Info' });
   },
 });
 
-FlowRouter.route('/edit-product', {
-  name: 'Edit_Product_Page',
+FlowRouter.route('/edit-product/:_id', {
+  name: 'Edit_Info_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Edit_Product_Page' });
+    BlazeLayout.render('App_Body', { main: 'Edit_Info_Page' });
+  },
+});
+
+FlowRouter.route('/product/:_id', {
+  name: 'Product',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Product' });
   },
 });
 
