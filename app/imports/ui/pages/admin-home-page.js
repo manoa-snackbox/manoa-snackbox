@@ -3,6 +3,7 @@
  */
 import { Template } from 'meteor/templating';
 import { Machines } from '../../api/machines/machines.js';
+import { _ } from 'meteor/underscore';
 
 Template.Admin_Home_Page.helpers({
 
