@@ -51,6 +51,13 @@ FlowRouter.route('/machine-page', {
   },
 });
 
+FlowRouter.route('/drink-page', {
+  name: 'Drink_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Drink_Page' });
+  },
+});
+
 FlowRouter.route('/add-product', {
   name: 'Add_Info',
   action() {

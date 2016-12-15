@@ -17,4 +17,7 @@ import './add-info.js';
 import './product.html';
 import './product.js';
 
+import './drink-page.html';
+import './drink-page.js';
+
 
