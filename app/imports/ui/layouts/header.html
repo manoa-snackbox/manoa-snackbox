@@ -4,16 +4,10 @@
       <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Manoa-Snackbox</h1></a>
       {{#if currentUser}}
       <a class="item" href="{{pathFor 'Map'}}"><p>Map</p></a>
-      <a class="item" href="{{pathFor 'Machine_Page'}}"><p>Machines</p></a>
+
       <a class="item" href="{{pathFor 'Info'}}"><p>Products</p></a>
       <a class="item" href="{{pathFor 'Admin_Home_Page'}}"><p>Admin</p></a>
 
-      <div class="ui container" style="padding-top:12px;">
-        <div class="ui icon input">
-          <input type="text" placeholder="Search for a product">
-          <i class="circular search link icon"></i>
-        </div>
-      </div>
 
       {{/if}}
       <div class="right floated item">{{> Cas_Login }} </div>

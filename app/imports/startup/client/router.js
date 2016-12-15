@@ -44,10 +44,10 @@ FlowRouter.route('/edit-machine/:id', {
   },
 });
 
-FlowRouter.route('/machine-page', {
-  name: 'Machine_Page',
+FlowRouter.route('/snack-page', {
+  name: 'Snack_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Machine_Page' });
+    BlazeLayout.render('App_Body', { main: 'Snack_Page' });
   },
 });
 

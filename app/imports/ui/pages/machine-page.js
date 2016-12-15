@@ -1,20 +1,20 @@
 import { Template } from 'meteor/templating';
 import { Products } from '../../api/products/products.js';
 
-Template.Machine_Page.helpers({
+Template.snack_Page.helpers({
 
   /**
-   * @returns {*} All of the machine documents.
+   * @returns {*} All of the snack documents.
    */
   productsList() {
     return Products.find();
   },
 });
 
-Template.Machine_Page.onCreated(function onCreated() {
+Template.snack_Page.onCreated(function onCreated() {
   this.autorun(() => {
     this.subscribe('Products');
-  });
+});
 });
 
 
