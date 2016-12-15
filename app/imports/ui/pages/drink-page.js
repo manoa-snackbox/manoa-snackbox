@@ -3,16 +3,6 @@ import { Products } from '../../api/products/products.js';
 
 Template.drink_page.helpers({
 
-
-  productsList() {
-    return Products.find();
-  },
-});
-
-Template.drink_page.onCreated(function onCreated() {
-  this.autorun(() => {
-    this.subscribe('Products');
-});
 });
 
 
