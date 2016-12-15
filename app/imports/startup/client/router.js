@@ -30,13 +30,6 @@ FlowRouter.route('/info', {
   },
 });
 
-FlowRouter.route('/polls', {
-  name: 'Poll',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Poll' });
-  },
-});
-
 FlowRouter.route('/edit-machine/:id', {
   name: 'Edit_Machine',
   action() {
@@ -44,19 +37,27 @@ FlowRouter.route('/edit-machine/:id', {
   },
 });
 
-FlowRouter.route('/machine-page', {
-  name: 'Machine_Page',
+FlowRouter.route('/drink-page', {
+  name: 'Drink_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Machine_Page' });
+    BlazeLayout.render('App_Body', { main: 'Drink_Page' });
   },
 });
 
-FlowRouter.route('/add-product', {
-  name: 'Add_Info',
+FlowRouter.route('/snack-page', {
+  name: 'Snack_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Add_Info' });
+    BlazeLayout.render('App_Body', { main: 'Snack_Page' });
   },
 });
+
+FlowRouter.route('/edit-info', {
+  name: 'Edit_Info',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Info' });
+  },
+});
+
 
 FlowRouter.route('/edit-product/:_id', {
   name: 'Edit_Info_Page',
