@@ -1,20 +1,8 @@
 import { Template } from 'meteor/templating';
 import { Products } from '../../api/products/products.js';
 
-Template.snack_Page.helpers({
+Template.drink_page.helpers({
 
-  /**
-   * @returns {*} All of the snack documents.
-   */
-  productsList() {
-    return Products.find();
-  },
-});
-
-Template.snack_Page.onCreated(function onCreated() {
-  this.autorun(() => {
-    this.subscribe('Products');
-});
 });
 
 
@@ -30,4 +18,3 @@ $('.dropdown')
       action: 'ready'
     })
 ;
-
